@@ -159,5 +159,33 @@ export const query = graphql`
         }
       }
     }
+    file(relativePath: { eq: "fruit.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 320) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    file(relativePath: { eq: "grain.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 320) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    file(relativePath: { eq: "beverage.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 320) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    file(relativePath: { eq: "berry.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
   }
 `;
