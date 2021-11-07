@@ -2,8 +2,17 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const SEO = (props) => {
-  const data = useStaticQuery(graphql`
+const SEO = ({
+  pagetitle,
+  pagedesc,
+  pagepath,
+  pageimg,
+  pageimgw,
+  pageimgh,
+}) => {
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -18,38 +27,38 @@ const SEO = (props) => {
     }
   `);
 
-  const title = props.pagetitle
-    ? `${props.pagetitle}`
-    : data.site.siteMetadata.title;
+  const title = pagetitle
+    ? `${pagetitle} | ${siteMetadata.title}}`
+    : siteMetadata.title;
 
-  const description = props.pagedesc || data.site.siteMetadata.description;
+  const description = pagedesc || siteMetadata.description;
 
-  const url = props.pagepath
-    ? `${data.site.siteMetadata.siteUrl}${props.pagepath}`
-    : data.site.siteMetadata.siteUrl;
+  const url = pagepath
+    ? `${siteMetadata.siteUrl}${pagepath}`
+    : siteMetadata.siteUrl;
 
-  const imgurl = props.pageimg
-    ? `${data.site.siteMetadata.siteUrl}${props.pageimg}`
-    : `${data.site.siteMetadata.siteUrl}/thumb.jpg`;
+  const imgurl = pageimg
+    ? `${siteMetadata.siteUrl}${pageimg}`
+    : `${siteMetadata.siteUrl}/thumb.jpg`;
 
-  const imgw = props.pageimgw || 1280;
-  const imgh = props.pageimgh || 640;
+  const imgw = pageimgw || 1280;
+  const imgh = pageimgh || 640;
 
   return (
     <Helmet>
-      <html lang={data.site.siteMetadata.lang} />
+      <html lang={siteMetadata.lang} />
       <title>{title}</title>
       <meta name="description" content={description} />
 
       <link rel="canonical" href={url} />
 
-      <meta property="og:site_name" content={data.site.siteMetadata.title} />
+      <meta property="og:site_name" content={siteMetadata.title} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
-      <meta property="og:locale" content={data.site.siteMetadata.locale} />
-      <meta property="fb:app_id" content={data.site.siteMetadata.fbappid} />
+      <meta property="og:locale" content={siteMetadata.locale} />
+      <meta property="fb:app_id" content={siteMetadata.fbappid} />
 
       <meta property="og:image" content={imgurl} />
       <meta property="og:image:width" content={imgw} />
