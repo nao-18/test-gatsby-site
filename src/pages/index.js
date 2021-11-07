@@ -6,7 +6,7 @@ const Index = () => (
       <div classname="container">
         <div classname="site">
           <a href="base-index.html">
-            <img src="images/logo.svg" alt="ESSENTIALS" />
+            <img src="/images/logo.svg" alt="ESSENTIALS" />
           </a>
         </div>
         <nav classname="nav">
@@ -23,7 +23,7 @@ const Index = () => (
     </header>
     <section classname="hero">
       <figure>
-        <img src="images/hero.jpg" alt="" />
+        <img src="/images/hero.jpg" alt="" />
       </figure>
       <div classname="catch">
         <h1>
@@ -33,7 +33,7 @@ const Index = () => (
         <p>食物を愛するよりも誠実な愛はない ― バーナード・ショー</p>
       </div>
       <div classname="wave">
-        <img src="images/wave.svg" alt="" />
+        <img src="/images/wave.svg" alt="" />
       </div>
     </section>
     <section classname="food">
@@ -44,7 +44,7 @@ const Index = () => (
         <div classname="details">
           <div classname="detail">
             <figure>
-              <img src="images/fruit.jpg" alt="" />
+              <img src="/images/fruit.jpg" alt="" />
             </figure>
             <h3>フルーツ</h3>
             <p>FRUIT</p>
@@ -56,7 +56,7 @@ const Index = () => (
           </div>
           <div classname="detail">
             <figure>
-              <img src="images/grain.jpg" alt="" />
+              <img src="/images/grain.jpg" alt="" />
             </figure>
             <h3>穀物</h3>
             <p>GRAIN</p>
@@ -68,7 +68,7 @@ const Index = () => (
           </div>
           <div classname="detail">
             <figure>
-              <img src="images/beverage.jpg" alt="" />
+              <img src="/images/beverage.jpg" alt="" />
             </figure>
             <h3>飲み物</h3>
             <p>BEVERAGE</p>
@@ -84,14 +84,14 @@ const Index = () => (
     <section classname="photo">
       <h2 classname="sr-only">Photo</h2>
       <figure>
-        <img src="images/berry.jpg" alt="赤く熟したベリー" />
+        <img src="/images/berry.jpg" alt="赤く熟したベリー" />
       </figure>
     </section>
     <footer classname="footer">
       <div classname="container">
         <div classname="site">
           <a href="base-index.html">
-            <img src="images/logo-w.svg" alt="ESSENTIALS" />
+            <img src="/images/logo-w.svg" alt="ESSENTIALS" />
             <p>おいしい食材と食事を探求するサイト</p>
           </a>
         </div>
