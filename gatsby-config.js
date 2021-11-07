@@ -4,6 +4,8 @@ module.exports = {
     description: `おいしい食材と食事を探求するサイト`,
     lang: `ja`,
     siteUrl: `http://localhost:8000`,
+    locale: `ja_JP`,
+    fbappid: ``,
   },
   plugins: [
     `gatsby-transformer-sharp`,
