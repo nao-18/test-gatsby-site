@@ -174,11 +174,13 @@ const Index = ({ data }) => (
           </i>
         </i>
       </div>
-      <i className="fab fa-twitter">
-        <i className="fab fa-facebook-square">
-          <i className="fab fa-instagram"></i>
-        </i>
-      </i>
+      <div className="back">
+        <Img
+          fluid={data.pattern.childImageSharp.fluid}
+          alt=""
+          style={{ height: '100%' }}
+        />
+      </div>
     </footer>
     <i className="fab fa-twitter">
       <i className="fab fa-facebook-square">
@@ -224,6 +226,13 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    pattern: file(relativePath: { eq: "pattern.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
