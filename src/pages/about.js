@@ -11,11 +11,12 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 
-const About = ({ data }) => (
+const About = ({ data, location }) => (
   <Layout>
     <SEO
       pagetitle="ESSENTIALSについて"
       pagedesc="食べ物についての情報を発信しているサイトです。"
+      pagepath={location.pagepath}
     />
     <div className="eyecatch">
       <figure>
