@@ -40,7 +40,7 @@ const SEO = (props) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
-
+      <meta property="og:type" content="website" />
       <meta property="og:locale" content={data.site.siteMetadata.locale} />
       <meta property="fb:app_id" content={data.site.siteMetadata.fbappid} />
     </Helmet>
