@@ -5172,6 +5172,17 @@ gatsby-page-utils@^2.1.0:
     lodash "^4.17.21"
     micromatch "^4.0.4"
 
+gatsby-plugin-manifest@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.1.0.tgz#ce28ebb422e2be843e4842de8950d07d35d6094b"
+  integrity sha512-qFwSXFMAQJleGhZwHqaNjqptVkMy9GZFiHijvnS+OjWZ/LZcLtd7uaKQMpbt2O7MY1R3cFcdoBgIGzkCwaXN9g==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    gatsby-core-utils "^3.1.0"
+    gatsby-plugin-utils "^2.1.0"
+    semver "^7.3.5"
+    sharp "^0.29.1"
+
 gatsby-plugin-page-creator@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-4.1.0.tgz#a9c879d5a97313046a6976b49d30d43cd1b7bc3a"
