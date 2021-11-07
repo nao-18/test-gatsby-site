@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-const Index = () => (
+const Index = ({ data }) => (
   <>
     <header className="header">
       <div className="container">
@@ -23,7 +25,7 @@ const Index = () => (
     </header>
     <section className="hero">
       <figure>
-        <img src="/images/hero.jpg" alt="" />
+        <Img fluid={data.file.childImageSharp.fluid} alt="" />
       </figure>
       <div className="catch">
         <h1>
@@ -147,3 +149,21 @@ const Index = () => (
 );
 
 export default Index;
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "hero.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600) {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcSetWebp
+          srcWebp
+          sizes
+        }
+      }
+    }
+  }
+`;
