@@ -16,7 +16,7 @@ const About = ({ data, location }) => (
     <SEO
       pagetitle="ESSENTIALSについて"
       pagedesc="食べ物についての情報を発信しているサイトです。"
-      pagepath={location.pagepath}
+      pagepath={location.pagename}
     />
     <div className="eyecatch">
       <figure>

@@ -19,7 +19,12 @@ const SEO = (props) => {
   const title = props.pagetitle
     ? `${props.pagetitle}`
     : data.site.siteMetadata.title;
+
   const description = props.pagedesc || data.site.siteMetadata.description;
+
+  const url = props.pagepath
+    ? `${data.site.siteMetadata.siteUrl}${props.pagepath}`
+    : data.site.siteMetadata.siteUrl;
 
   return (
     <Helmet>
@@ -27,7 +32,7 @@ const SEO = (props) => {
       <title>{title}</title>
       <meta name="description" content={description} />
 
-      <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
+      <link rel="canonical" href={url} />
     </Helmet>
   );
 };
