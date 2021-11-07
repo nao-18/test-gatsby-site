@@ -4,11 +4,11 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
 
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const Index = ({ data }) => (
   <Layout>
-    <SEO />
+    <Seo />
     <section className="hero">
       <figure>
         <Img

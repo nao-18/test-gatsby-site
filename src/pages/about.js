@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +13,7 @@ config.autoAddCss = false;
 
 const About = ({ data, location }) => (
   <Layout>
-    <SEO
+    <Seo
       pagetitle="ESSENTIALSについて"
       pagedesc="食べ物についての情報を発信しているサイトです。"
       pagepath={location.pagename}
