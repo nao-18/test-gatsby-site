@@ -10,6 +10,7 @@ const SEO = (props) => {
           description
           title
           lang
+          siteUrl
         }
       }
     }
@@ -25,6 +26,8 @@ const SEO = (props) => {
       <html lang={data.site.siteMetadata.lang} />
       <title>{title}</title>
       <meta name="description" content={description} />
+
+      <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
     </Helmet>
   );
 };

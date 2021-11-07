@@ -3,6 +3,7 @@ module.exports = {
     title: 'ESSENTIALS',
     description: `おいしい食材と食事を探求するサイト`,
     lang: `ja`,
+    siteUrl: `http://localhost:8000`,
   },
   plugins: [
     `gatsby-transformer-sharp`,
