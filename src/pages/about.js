@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
@@ -12,6 +13,7 @@ config.autoAddCss = false;
 
 const About = ({ data }) => (
   <Layout>
+    <SEO />
     <div className="eyecatch">
       <figure>
         <Img
