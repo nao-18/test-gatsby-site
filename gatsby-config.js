@@ -18,5 +18,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `ESSENTIALS エッセンシャルズ`,
+        short_name: `ESSENTIALS`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#477294`,
+        display: `standolone`,
+        icon: `src/images/icon.png`,
+      },
+    },
   ],
 };
