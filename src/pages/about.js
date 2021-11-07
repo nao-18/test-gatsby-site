@@ -8,7 +8,11 @@ const Index = ({ data }) => (
   <Layout>
     <div className="eyecatch">
       <figure>
-        <img src="images/about.jpg" alt="ブルーベリー＆ヨーグルト" />
+        <img src="images/about.jpg" />
+        <Img
+          fluid={data.about.childImageSharp.fluid}
+          alt="ブルーベリー＆ヨーグルト"
+        />
       </figure>
     </div>
     <article className="content">
@@ -54,35 +58,7 @@ export default Index;
 
 export const query = graphql`
   query {
-    hero: file(relativePath: { eq: "hero.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    fruit: file(relativePath: { eq: "fruit.jpg" }) {
-      childImageSharp {
-        fixed(width: 200) {
-          ...GatsbyImageSharpFixed_withWebp
-        }
-      }
-    }
-    grain: file(relativePath: { eq: "grain.jpg" }) {
-      childImageSharp {
-        fixed(width: 200) {
-          ...GatsbyImageSharpFixed_withWebp
-        }
-      }
-    }
-    beverage: file(relativePath: { eq: "beverage.jpg" }) {
-      childImageSharp {
-        fixed(width: 200) {
-          ...GatsbyImageSharpFixed_withWebp
-        }
-      }
-    }
-    berry: file(relativePath: { eq: "berry.jpg" }) {
+    about: file(relativePath: { eq: "about.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid_tracedSVG
